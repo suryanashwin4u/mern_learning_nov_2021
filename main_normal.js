@@ -47,6 +47,8 @@ app.get('/get_variable_3/:a-:b',(req,res)=>{
 });
 
 
+
+
 // passing optional parameters using dash notation
 app.get('/get_variable_4/:a?-:b?',(req,res)=>{                                 
   res.send("a = "+ req.params.a +" , b = "+ req.params.b);
@@ -122,6 +124,7 @@ var middleware_3 = function(req,res,next){
 app.get('/middleware_3/:name?', middleware_3, (req,res)=>{    //middleware will be called from here                             
   res.send("<h1>middleware_3 will be called and username is passed to middleware_3</h1>");
 });
+
 
 
 //listening on port 5000
